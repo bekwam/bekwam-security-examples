@@ -6,7 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/protected")
-public class ProtectedResources {
+public class ProtectedResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
