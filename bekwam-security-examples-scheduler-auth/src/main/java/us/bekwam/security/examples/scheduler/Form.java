@@ -6,13 +6,10 @@ import java.time.LocalDateTime;
 @Entity
 public class Form {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     private String mydata;
 
-    @Enumerated(EnumType.STRING)
     private FormStateType formStateType;
 
     private LocalDateTime receivedOn;
@@ -26,6 +23,8 @@ public class Form {
         this.mydata = mydata;
     }
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public Long getId() {
         return id;
     }
@@ -42,6 +41,7 @@ public class Form {
         this.mydata = mydata;
     }
 
+    @Enumerated(EnumType.STRING)
     public FormStateType getFormStateType() {
         return formStateType;
     }

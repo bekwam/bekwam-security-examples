@@ -6,8 +6,8 @@
          version="4.0">
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>Protected page</web-resource-name>
-            <url-pattern>/api/protected</url-pattern>
+            <web-resource-name>Protected pages</web-resource-name>
+            <url-pattern>/api/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>user</role-name>
