@@ -1,0 +1,5 @@
+POST http://localhost:8080/scheduler-auth/api/forms
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic carlw vKcmCqub
+
+mydata=Carl
