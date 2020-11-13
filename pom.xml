@@ -15,12 +15,6 @@
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>${javaee.version}</version>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -28,11 +22,18 @@
             <version>${slf4j.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakarta.jakartaee-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <properties>
         <slf4j.version>1.7.30</slf4j.version>
-        <javaee.version>7.0</javaee.version>
+        <jakarta.jakartaee-api.version>8.0.0</jakarta.jakartaee-api.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
