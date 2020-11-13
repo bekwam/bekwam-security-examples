@@ -12,6 +12,7 @@
         <module>bekwam-security-examples-basic-auth</module>
         <module>bekwam-security-examples-ejb-auth</module>
         <module>bekwam-security-examples-scheduler-auth</module>
+        <module>bekwam-security-examples-security-ctx</module>
     </modules>
 
     <dependencies>
