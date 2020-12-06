@@ -30,10 +30,9 @@ public class ItemBean {
         return q.getResultList();
     }
 
-    public List<Item> findItemsByOwner(String owner) {
+    public List<Item> findItemsByOwner() {
 
         if(log.isDebugEnabled()) {
-            log.debug("[FIND ITEMS BY OWNER] owner={}", owner);
             log.debug("[FIND ITEMS BY OWNER] principal={}", context.getCallerPrincipal().getName());
             log.debug("[FIND ITEMS BY OWNER] in admin?={}", context.isCallerInRole("admin"));
         }
@@ -43,7 +42,7 @@ public class ItemBean {
         }
 
         Query q = em.createQuery("SELECT i FROM Item i WHERE i.owner = :owner ORDER BY i.id DESC");
-        q.setParameter("owner", owner);
+        q.setParameter("owner", context.getCallerPrincipal().getName());
         return q.getResultList();
     }
 }
