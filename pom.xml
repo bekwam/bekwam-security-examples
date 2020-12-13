@@ -13,6 +13,11 @@
         <module>bekwam-security-examples-ejb-auth</module>
         <module>bekwam-security-examples-scheduler-auth</module>
         <module>bekwam-security-examples-security-ctx</module>
+        <module>bekwam-security-examples-custom-realm</module>
+        <module>bekwam-security-examples-custom-realm-test</module>
+        <module>bekwam-security-examples-digest-auth</module>
+        <module>bekwam-security-examples-basic-auth-2</module>
+        <module>bekwam-security-examples-codecs</module>
     </modules>
 
     <dependencies>

@@ -11,5 +11,15 @@
 
     <artifactId>bekwam-security-examples-custom-realm</artifactId>
 
+    <properties>
+        <elytron.version>1.13.1.Final</elytron.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.wildfly.security</groupId>
+            <artifactId>wildfly-elytron</artifactId>
+            <version>${elytron.version}</version>
+        </dependency>
+    </dependencies>
 </project>

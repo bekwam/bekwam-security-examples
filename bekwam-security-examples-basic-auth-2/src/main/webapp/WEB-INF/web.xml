@@ -18,6 +18,6 @@
     </security-role>
     <login-config>
         <auth-method>BASIC</auth-method>
-        <realm-name>anyrealmvalue</realm-name>
+        <realm-name>Basic Auth 2 Web Site</realm-name>
     </login-config>
 </web-app>

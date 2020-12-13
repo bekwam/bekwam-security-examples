@@ -1,4 +1,4 @@
-package us.bekwam.security.examples.custom;
+package basic;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,5 +10,5 @@ public class PublicResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String helloWorld() { return "Hello, World!"; }
+    public String helloWorld() { return "Hello, World! -From the Digest App"; }
 }

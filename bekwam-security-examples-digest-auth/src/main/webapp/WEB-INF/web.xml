@@ -17,7 +17,7 @@
         <role-name>user</role-name>
     </security-role>
     <login-config>
-        <auth-method>BASIC</auth-method>
-        <realm-name>anyrealmvalue</realm-name>
+        <auth-method>DIGEST</auth-method>
+        <realm-name>Application3Realm</realm-name>
     </login-config>
 </web-app>

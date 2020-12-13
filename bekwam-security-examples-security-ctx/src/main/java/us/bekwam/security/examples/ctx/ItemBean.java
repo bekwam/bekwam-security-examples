@@ -24,12 +24,6 @@ public class ItemBean {
     @Resource
     private EJBContext context;
 
-    @RolesAllowed("admin")
-    public List<Item> findAllItems() {
-        Query q = em.createQuery("SELECT i FROM Item i ORDER BY i.owner, i.id DESC");
-        return q.getResultList();
-    }
-
     public List<Item> findItemsByOwner() {
 
         if(log.isDebugEnabled()) {
@@ -43,6 +37,12 @@ public class ItemBean {
 
         Query q = em.createQuery("SELECT i FROM Item i WHERE i.owner = :owner ORDER BY i.id DESC");
         q.setParameter("owner", context.getCallerPrincipal().getName());
+        return q.getResultList();
+    }
+
+    @RolesAllowed("admin")
+    public List<Item> findAllItems() {
+        Query q = em.createQuery("SELECT i FROM Item i ORDER BY i.owner, i.id DESC");
         return q.getResultList();
     }
 }

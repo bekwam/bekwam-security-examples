@@ -1,4 +1,4 @@
-package us.bekwam.security.examples.custom;
+package basic;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -5,7 +5,6 @@
 
     <persistence-unit name="test" transaction-type="JTA">
         <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
-        <class>us.bekwam.security.examples.scheduler.Form</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
             <property name="hibernate.max_fetch_depth" value="3" />

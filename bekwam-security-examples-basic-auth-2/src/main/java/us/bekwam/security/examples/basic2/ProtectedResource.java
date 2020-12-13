@@ -1,4 +1,4 @@
-package us.bekwam.security.examples.custom;
+package us.bekwam.security.examples.basic2;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,5 +10,5 @@ public class ProtectedResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String secretMessage() { return "A Secret Message"; }
+    public String secretMessage() { return "A Secret Message (2)"; }
 }
