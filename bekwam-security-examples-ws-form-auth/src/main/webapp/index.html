@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WS Form Auth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+    <body>
+        <div id="wrapper">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-two-thirds">
+                    <section class="section">
+                        <h1 class="title">Bekwam Web Sockets Form Auth</h1>
+                        <h2 class="subtitle">index.html</h2>
+                        <div class="columns">
+                            <div class="column">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">Login</p>
+                            </div>
+                             <div class="card-content">
+                                <p class="content">
+                                    This is a demo of JavaEE FORM authentication
+                                    with WebSockets and Vue.js.  The login mechanism is standard
+                                    JavaEE.
+                                </p>
+                                <div class="buttons">
+                                    <a href="./login.html" class="button">Login</a>
+                                    <form action="logout" method="POST">
+                                        <input class="button" type="submit" value="Logout" />
+                                    </form>
+                                </div>
+                                 <p class="content">
+                                     <em>Both buttons are showing at all times because server-side code is required to make them conditional.  To keep the demo focused on SPAs, no server-side code is used.
+                                     </em>
+                                 </p>
+                             </div>
+                            </div>
+                                </div>
+                                <div class="column">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">Run</p>
+                            </div>
+                            <div class="card-content">
+                                <p class="content">
+                                    If you're already logged in, press the Run Demo button below.  If you're not logged in and press the button, you'll be directed to a Login page.
+                                </p>
+                                <div class="buttons">
+                                    <a href="hw.html" class="button is-primary">Run Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-two-thirds">
+                    Demo brought to you by Bekwam, Inc &bull; <a href="https://www.bekwam.com">www.bekwam.com</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

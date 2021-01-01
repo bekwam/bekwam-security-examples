@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WS Form Auth - HW></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+<body>
+<div id="app">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-two-thirds">
+    <section class="section">
+        <h1 class="title">Bekwam Web Sockets Form Auth</h1>
+        <h2 class="subtitle">hw.hmtl</h2>
+        <p class="content">
+            At this point, the user is logged in an authenticated.
+        </p>
+        <p class="content">Press the Connect button. This will establish a WebSocket connection with the server.  </p>
+        <p class="content">
+            Next, press the Fetch button one or more times to get a canned, timestamped message back from the server.
+        </p>
+        <p class="content">
+            Press Close to reset the test.
+        </p>
+        <hr />
+        <p v-if="errorMessage" class="notification is-danger">
+            {{ errorMessage }}
+        </p>
+        <div class="columns is-mobile">
+            <div class="column">
+                <div class="buttons">
+                    <button class="button" :disabled="isConnected" :class="{ 'is-success': !isConnected }" @click="connect">Connect</button>
+                    <button @click="callWS" class="button" :disabled="!isConnected" :class="{ 'is-success': isConnected }">Fetch</button>
+                    <button class="button" @click="close" :disabled="!isConnected">Close</button>
+                    <form action="logout" method="POST">
+                        <input class="button is-dark" type="submit" value="Logout" />
+                    </form>
+                </div>
+            </div>
+            <div class="column">
+                <h2 class="subtitle">Retrieved Message</h2>
+                <p class="content">
+                    {{ message }}
+                </p>
+            </div>
+        </div>
+    </section>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-two-thirds">
+            Demo brought to you by Bekwam, Inc &bull; <a href="https://www.bekwam.com">www.bekwam.com</a>
+        </div>
+    </div>
+</footer>
+<script src="./js/main.js"></script>
+
+</body>
+</html>
