@@ -13,4 +13,6 @@
 
     <packaging>war</packaging>
 
+    <name>Basic Auth</name>
+    <description>Protected RESTful web service using default domain</description>
 </project>

@@ -20,6 +20,8 @@
         <module>bekwam-security-examples-codecs</module>
         <module>bekwam-security-examples-ws-basic-auth</module>
         <module>bekwam-security-examples-ws-form-auth</module>
+        <module>bekwam-security-examples-form-auth-jdbc</module>
+        <module>bekwam-security-examples-basic-auth-3</module>
     </modules>
 
     <dependencies>
