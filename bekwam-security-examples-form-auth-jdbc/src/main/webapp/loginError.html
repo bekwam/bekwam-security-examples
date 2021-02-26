@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Auth Demo - Login Error</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    </head>
+    <body>
+        <div class="container is-max-desktop">
+            <h1 class="title">Form Auth Demo</h1>
+            <p class="notification is-danger">
+                Bad username or password, please try again
+            </p>
+            <form action="j_security_check" method="POST">
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control">
+                        <input class="input" type="text" name="j_username"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" type="secret" name="j_password"/>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input class="button is-success" type="submit" value="Login"/>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
