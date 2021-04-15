@@ -24,6 +24,7 @@
         <module>bekwam-security-examples-basic-auth-3</module>
         <module>bekwam-security-examples-jms</module>
         <module>bekwam-security-examples-jms-client</module>
+        <module>bekwam-security-examples-jwt</module>
     </modules>
 
     <dependencies>
