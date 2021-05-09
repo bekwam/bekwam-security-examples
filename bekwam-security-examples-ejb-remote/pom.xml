@@ -9,10 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bekwam-security-examples-basic-auth</artifactId>
+    <artifactId>bekwam-security-examples-ejb-remote</artifactId>
 
-    <packaging>war</packaging>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
 
-    <name>Basic Auth</name>
-    <description>Protected RESTful web service using BASIC Auth and a PropertiesRealm</description>
 </project>

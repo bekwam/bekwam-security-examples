@@ -1,0 +1,28 @@
+##
+## jboss-cli.sh commands for Basic Auth Demo
+##
+
+## create properties realm
+/subsystem=elytron/properties-realm=BasicAuthRealm:add( \
+users-properties={path=basic-auth-users.properties,relative-to=jboss.server.config.dir}, \
+groups-properties={path=basic-auth-roles.properties,relative-to=jboss.server.config.dir} \
+)
+
+## create properties-based security domain
+/subsystem=elytron/security-domain=BasicAuthSD:add( \
+default-realm=BasicAuthRealm, \
+permission-mapper=default-permission-mapper, \
+realms=[\
+ {realm=BasicAuthRealm,role-decoder=groups-to-roles} \
+] \
+)
+
+## create asd for undertow
+/subsystem=undertow/application-security-domain=BasicAuthASD:add( \
+security-domain=BasicAuthSD \
+)
+
+## create asd for ejb3
+/subsystem=ejb3/application-security-domain=BasicAuthASD:add( \
+security-domain=BasicAuthSD \
+)

@@ -6,8 +6,8 @@
          version="4.0">
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>Protected page</web-resource-name>
-            <url-pattern>/api/protected</url-pattern>
+            <web-resource-name>Message servlet</web-resource-name>
+            <url-pattern>/message</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>user</role-name>
@@ -17,12 +17,7 @@
         <role-name>user</role-name>
     </security-role>
     <login-config>
-        <auth-method>BASIC</auth-method>
-        <!--
-        In this config, realm-name is purely informational.  If you hit a protected
-        URL in the browser, the dialog will say some thing like "This site says
-        '<< web.xml's realm name >>'
-        -->
-        <realm-name>Bekwam Basic Auth Demo</realm-name>
+        <auth-method>BEARER_TOKEN</auth-method>
+        <realm-name>jwt-realm</realm-name>
     </login-config>
 </web-app>
