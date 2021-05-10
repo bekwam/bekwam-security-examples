@@ -26,3 +26,12 @@ security-domain=BasicAuthSD \
 /subsystem=ejb3/application-security-domain=BasicAuthASD:add( \
 security-domain=BasicAuthSD \
 )
+
+## sasl config for ejb remoting
+/subsystem=elytron/sasl-authentication-factory=basic-auth-sasl-authentication:add( \
+sasl-server-factory=configured, \
+security-domain=BasicAuthSD, \
+mechanism-configurations=[\
+{mechanism-name=PLAIN} \
+] \
+)

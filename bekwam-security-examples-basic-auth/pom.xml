@@ -13,6 +13,20 @@
 
     <packaging>war</packaging>
 
+    <properties>
+        <wf.version>23.0.2.Final</wf.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-ejb-client-bom</artifactId>
+            <type>pom</type>
+            <version>${wf.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <name>Basic Auth</name>
     <description>Protected RESTful web service using BASIC Auth and a PropertiesRealm</description>
 </project>
