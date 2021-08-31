@@ -17,13 +17,5 @@
     <security-role>
         <role-name>user</role-name>
     </security-role>
-    <login-config>
-        <auth-method>BASIC</auth-method>
-        <!--
-        In this config, realm-name is purely informational.  If you hit a protected
-        URL in the browser, the dialog will say some thing like "This site says
-        '<< web.xml's realm name >>'
-        -->
-        <realm-name>Bekwam Basic Auth Demo</realm-name>
-    </login-config>
+
 </web-app>

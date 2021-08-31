@@ -11,9 +11,20 @@
 
     <artifactId>bekwam-security-examples-ejb-remote</artifactId>
 
+    <packaging>pom</packaging>
+    <modules>
+        <module>bekwam-security-examples-ejb-remote-ejb</module>
+        <module>bekwam-security-examples-ejb-remote-cli</module>
+        <module>bekwam-security-examples-ejb-remote-ear</module>
+    </modules>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+
+    <name>EJB Remoting Parent</name>
+    <description>Demonstrates EJB remoting with security</description>
 
 </project>

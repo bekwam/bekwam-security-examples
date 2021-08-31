@@ -25,6 +25,9 @@
         <module>bekwam-security-examples-jms</module>
         <module>bekwam-security-examples-jms-client</module>
         <module>bekwam-security-examples-jwt</module>
+        <module>bekwam-security-examples-keycloak</module>
+        <module>bekwam-security-examples-kc-javafx</module>
+        <module>bekwam-security-examples-ejb-remote</module>
     </modules>
 
     <dependencies>

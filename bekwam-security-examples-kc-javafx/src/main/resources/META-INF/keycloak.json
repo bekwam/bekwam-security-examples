@@ -1,0 +1,9 @@
+{
+  "realm": "kc-plat-arch",
+  "auth-server-url": "http://localhost:8180/auth",
+  "ssl-required": "external",
+  "resource": "kc-spa",
+  "public-client": true,
+  "use-resource-role-mappings": true,
+  "enable-pkce": true
+}

@@ -13,8 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package us.bekwam.security.examples.remote.cli;/**
+package us.bekwam.security.examples.remote.cli;
+
+import us.bekwam.security.examples.remote.ejb.Echo;
+
+import javax.ejb.EJB;
+
+/**
  * @author carl
  */
 public class EchoMain {
+
+    @EJB
+    private static Echo echo;
+
+    public static void main(String[] args) {
+        System.out.println("echo 'hi'=" + echo.echo("hi"));
+    }
 }

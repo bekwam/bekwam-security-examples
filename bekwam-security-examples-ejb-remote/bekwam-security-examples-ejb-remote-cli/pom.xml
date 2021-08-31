@@ -16,4 +16,35 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>us.bekwam</groupId>
+            <artifactId>bekwam-security-examples-ejb-remote-ejb</artifactId>
+            <version>${project.parent.version}</version>
+            <type>ejb-client</type>
+        </dependency>
+    </dependencies>
+
+    <name>EJB Remoting Client</name>
+    <description>An EJB command line Application Client that demonstrates EJB remoting with security</description>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                        <!-- need to set the Main class for the appclient -->
+                        <manifest>
+                            <mainClass>us.bekwam.security.examples.remote.cli.EchoMain</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

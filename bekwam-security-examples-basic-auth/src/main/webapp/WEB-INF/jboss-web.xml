@@ -5,5 +5,5 @@
            version="7.2">
 
     <context-root>/basic-auth</context-root>
-    <security-domain>BasicAuthASD</security-domain>
+    <security-domain>OAuth20ASD</security-domain>
 </jboss-web>

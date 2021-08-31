@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bekwam-security-examples</artifactId>
+        <groupId>us.bekwam</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
+    <modules>
+        <module>bekwam-security-examples-keycloak-rest</module>
+        <module>bekwam-security-examples-keycloak-commons</module>
+        <module>bekwam-security-examples-keycloak-desktop</module>
+        <module>bekwam-security-examples-keycloak-ejb</module>
+        <module>bekwam-security-examples-keycloak-ear</module>
+        <module>bekwam-security-examples-keycloak-spa</module>
+    </modules>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bekwam-security-examples-keycloak</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <name>KeyCloak Platform Architecture</name>
+    <description>Comprehensive demo of Keycloak functionality</description>
+
+</project>

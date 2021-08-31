@@ -8,12 +8,68 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>bekwam-security-examples-ejb-remote-ear</artifactId>
+    <packaging>ear</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>bekwam-security-examples-ejb-remote-cli</artifactId>
+            <version>${project.version}</version>
+            <type>app-client</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>bekwam-security-examples-ejb-remote-ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- define the name for the deployable archive instead of using the default name with the version -->
+        <finalName>${project.parent.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-acr-plugin</artifactId>
+                <version>3.0.0</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <displayName>EJB Remoting</displayName>
+                    <version>8</version>
+                    <generateApplicationXml>true</generateApplicationXml>
+                    <modules>
+                        <ejbModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>bekwam-security-examples-ejb-remote-ejb</artifactId>
+                            <bundleFileName>ejb.jar</bundleFileName>
+                        </ejbModule>
+                        <appClientModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>bekwam-security-examples-ejb-remote-cli</artifactId>
+                            <bundleFileName>simpleClient.jar</bundleFileName>
+                        </appClientModule>
+                    </modules>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <name>EJB Remoting EAR</name>
+    <description>An EJB EAR that demonstrates EJB remoting with security</description>
 
 </project>

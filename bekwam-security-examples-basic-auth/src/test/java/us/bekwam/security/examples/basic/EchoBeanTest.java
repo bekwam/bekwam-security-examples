@@ -31,5 +31,6 @@ public class EchoBeanTest {
         final Context context = new InitialContext(jndiProperties);
         Echo echoService = (Echo) context.lookup("ejb:/bekwam-security-examples-basic-auth/EchoBean!us.bekwam.security.examples.basic.Echo");
         System.out.println( echoService.echo("Hi There!") );
+        System.out.println( echoService.echo("Hi There!") );
     }
 }

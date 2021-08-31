@@ -9,7 +9,7 @@
     <assembly-descriptor>
         <s:security>
             <ejb-name>*</ejb-name>
-            <s:security-domain>BasicAuthASD</s:security-domain>
+            <s:security-domain>OAuth20ASD</s:security-domain>
         </s:security>
     </assembly-descriptor>
 </jboss:ejb-jar>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bekwam-security-examples-keycloak</artifactId>
+        <groupId>us.bekwam</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bekwam-security-examples-keycloak-ear</artifactId>
+
+    <packaging>ear</packaging>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>us.bekwam</groupId>
+            <artifactId>bekwam-security-examples-keycloak-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>us.bekwam</groupId>
+            <artifactId>bekwam-security-examples-keycloak-ejb</artifactId>
+            <version>${project.parent.version}</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>us.bekwam</groupId>
+            <artifactId>bekwam-security-examples-keycloak-rest</artifactId>
+            <version>${project.parent.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <applicationName>bekwam-security-examples-keycloak-ear</applicationName>
+                    <version>7</version>
+                    <defaultLibBundleDir>lib/</defaultLibBundleDir>
+                    <skinnyWars>true</skinnyWars>
+                    <modules>
+                        <ejbModule>
+                            <groupId>us.bekwam</groupId>
+                            <artifactId>bekwam-security-examples-keycloak-ejb</artifactId>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>us.bekwam</groupId>
+                            <artifactId>bekwam-security-examples-keycloak-rest</artifactId>
+                            <contextRoot>/kc-rest</contextRoot>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <name>Keycloak Platform Architecture - EAR</name>
+    <description>EAR packaging for Keycloak platform architecture</description>
+
+</project>
